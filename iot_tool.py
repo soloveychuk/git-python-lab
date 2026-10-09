@@ -42,6 +42,16 @@ def calculate_variant_4():
 
 def calculate_variant_5():
     print("\n[Variant 5: Unmanned Aerial Vehicle Telemetry]")
+    H = float(input("Enter H value: "))
+    V_z = float(input("Enter V_z value: "))
+    t = H / V_z
+    print(t)
+    print(int(H) ^ int(V_z))
+    pack = input("Enter telemetry pack: ")
+    print("Pack is correct") if pack[0:6] == '$GPGGA' else print("Pack is incorrect")
+    drone_dict = {'drone_id': '001', 'flight_mode': 'f3', 'active_sensors': ['IMU', 'CER', 'CAD', 'CER']}
+    sensors_set = set(drone_dict['active_sensors'])
+    print("Sensor exists") if ("IMU" in sensors_set) and H > 10 else print("Sensor doesn't exist")
     # DEVELOPER 5: Read altitude H and vertical speed Vz. Calculate t = H / Vz.
     # Perform bitwise XOR between H and Vz. Validate $GPGGA telemetry string, active sensors.
     pass
