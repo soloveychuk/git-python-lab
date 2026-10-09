@@ -16,6 +16,34 @@ def calculate_variant_1():
     print("\n[Variant 1: Servomotor Control Systems]")
     # DEVELOPER 1: Read theta and omega. Calculate t = theta / omega.
     # Perform bitwise AND between integer theta and 0xFF. Servomotor name, list of angles.
+    angle = float(input("Введіть кут повороту ротора (в градусах): "))
+    angular_velocity = float(input("Введіть кутову швидкість ротора (в градусах на секунду): "))
+    time = angle / angular_velocity
+    print(f"Час повороту: {time}")
+    a = int(angle) & 0xFF
+    print(f"«Логічне множення» між цілочисельним значенням кута та маскою 0xFF у двійковій формі: {bin(a)}")
+
+    name = input("Введіть назву сервопривода: ")
+    print(" У назві є дефіс\n", f"Назва моделі: {name[(name.find('-') + 1):].upper()}") if '-' in name else print("У назві немає дефіса")
+
+    angles = [0, 45, 90, 135, 180]
+    angles[2] = 100
+    angles.append(270)
+    print(f"Допустимі кути: {angles}")
+
+    voltage_range = (1.5, 5)
+    print(f"Діапазон напруг: {voltage_range}")
+
+    motor = {
+     "id": 12345,
+     "torque": 56.6,
+     "modes": ["position", "speed", "position"]
+     }
+
+    unique_modes = set(motor["modes"])
+    print(f"Унікальні режими: {unique_modes}")
+
+    print("Так") if ("position" in unique_modes) and (motor["torque"] > 10) else print("Ні")
     pass
 
 
