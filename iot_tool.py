@@ -75,6 +75,7 @@ def calculate_variant_5():
     t = H / V_z
     print(t)
     print(int(H) ^ int(V_z))
+    print(bin(int(H) ^ int(V_z)))
     pack = input("Enter telemetry pack: ")
     print("Pack is correct") if pack[0:6] == '$GPGGA' else print("Pack is incorrect")
     drone_dict = {'drone_id': '001', 'flight_mode': 'f3', 'active_sensors': ['IMU', 'CER', 'CAD', 'CER']}
