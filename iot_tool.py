@@ -115,7 +115,7 @@ def calculate_variant_9():
     t=int(input())
     Q=P*t
     print('Отриманий результат на завдання 1:')
-    print(Q,P^t)
+    print(bin(Q),bin(P^t))
     print("Введіть значення PLC_HVAC_Cabinet_01:")
     PLC_HVAC_Cabinet_01=input()
     k=len(PLC_HVAC_Cabinet_01)
