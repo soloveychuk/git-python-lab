@@ -110,6 +110,18 @@ def calculate_variant_9():
     print("\n[Variant 9: Climate Control and Ventilation Systems]")
     # DEVELOPER 9: Read heater power (P) and runtime (t). Thermal energy Q = P * t.
     # Perform bitwise XOR between power and time. PLC_HVAC controller identifier string.
+    print('Введіть значення потужності, а потім час роботи ТЕНа')
+    P=int(input())
+    t=int(input())
+    Q=P*t
+    print('Отриманий результат на завдання 1:')
+    print(Q,P^t)
+    print("Введіть значення PLC_HVAC_Cabinet_01:")
+    PLC_HVAC_Cabinet_01=input()
+    k=len(PLC_HVAC_Cabinet_01)
+    a=(True if PLC_HVAC_Cabinet_01[k-2:k]=="01" else False)
+    print('Отриманий результат на завдання 2:')
+    print(a, PLC_HVAC_Cabinet_01[k-10:k].lower())
     pass
 
 
