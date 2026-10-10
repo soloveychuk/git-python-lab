@@ -159,15 +159,15 @@ def calculate_variant_13():
 if __name__ == "__main__":
     print_banner()
     
-    # calculate_variant_1()
+    calculate_variant_1()
     # calculate_variant_2()
     # calculate_variant_3()
     # calculate_variant_4()
-    # calculate_variant_5()
+    calculate_variant_5()
     # calculate_variant_6()
     # calculate_variant_7()
     # calculate_variant_8()
-    # calculate_variant_9()
+    calculate_variant_9()
     # calculate_variant_10()
     # calculate_variant_11()
     # calculate_variant_12()
