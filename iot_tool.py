@@ -136,6 +136,10 @@ def calculate_variant_11():
     print("\n[Variant 11: BLDC Motor Control Systems]")
     # DEVELOPER 11: Read PWM duty cycle (DUTY) and supply voltage Vdc. Vphase = (DUTY/100)*Vdc.
     # Perform bitwise AND between integer DUTY and 0b11110000. Hall sensors state string.
+    Duty = int(input('Duty='))
+    Vdc = int(input('Vdc='))
+    Vphase = (Duty/100)*Vdc
+    print('Vphase=', Vphase)
     pass
 
 
