@@ -170,6 +170,6 @@ if __name__ == "__main__":
     # calculate_variant_8()
     calculate_variant_9()
     # calculate_variant_10()
-    # calculate_variant_11()
+    calculate_variant_11()
     # calculate_variant_12()
     # calculate_variant_13()
